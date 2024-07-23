@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 
 const Index = () => {
   return (
-    <div className="flex-grow flex justify-center items-center">
-      <div className="text-center">
-        <h1 className="text-3xl">Your Blank Canvas</h1>
-        <p>Chat with the agent to start making edits.</p>
-      </div>
+    <div className="flex-grow flex justify-center items-center p-4">
+      <Card className="w-full max-w-md">
+        <CardHeader>
+          <CardTitle>My Application</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <Input placeholder="Enter something..." />
+            <Button className="w-full">Submit</Button>
+          </div>
+        </CardContent>
+        <CardFooter>
+          <p className="text-sm text-gray-500">
+            This is a bare-bones application. Modify it as needed.
+          </p>
+        </CardFooter>
+      </Card>
     </div>
   );
 };
